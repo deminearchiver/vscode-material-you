@@ -1,0 +1,138 @@
+
+
+body {
+  font-family: "Roboto Flex", "Open Sans", system-ui, sans-serif, system;
+}
+
+.monaco-button {
+  position: relative;
+  min-height: 40px;
+  height: 40px;
+  max-height: 40px;
+  border-radius: 9999px;
+  overflow: hidden;
+
+  padding-inline: 24px !important;
+
+  /* label-large */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.1px !important;
+  line-height: 20px !important;
+
+  /* Filled */
+  &:not(.secondary) {
+    background-color: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+    --md-comp-ripple-hover-color: var(--md-sys-color-on-primary);
+    --md-comp-ripple-pressed-color: var(--md-sys-color-on-primary);
+  }
+
+  /* Outlined */
+  &.secondary {
+    background-color: transparent !important;
+    color: var(--md-sys-color-primary) !important;
+    --md-comp-ripple-hover-color: var(--md-sys-color-primary);
+    --md-comp-ripple-pressed-color: var(--md-sys-color-primary);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border: 1px solid var(--md-sys-color-outline);
+    }
+  }
+}
+
+.scrollbar {
+  & > .slider {
+    border-radius: 9999px !important;
+  }
+
+  &.horizontal {
+    height: 8px !important;
+
+    & > slider {
+      height: 8xp !important;
+    }
+  }
+
+  &.vertical > .slider {
+    width: 8px !important;
+
+    & > slider {
+      width: 8px !important;
+    }
+  }
+}
+
+.monaco-list-row {
+}
+
+
+.monaco-dialog-modal-block.dimmed {
+  background-color: rgba(0, 0, 0, 0.32) !important;
+}
+
+.dialog-shadow {
+  box-shadow: none !important;
+}
+
+.monaco-dialog-box {
+  border-radius: 28px;
+
+  & > .dialog-toolbar-row {
+    display: none;
+  }
+
+  & > .dialog-message-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 24px;
+    padding-block: 24px 16px;
+
+    & > .dialog-icon {
+      width: 24px;
+      height: 24px;
+      flex: unset;
+      font-size: 24px;
+    }
+  }
+  & > .dialoge-buttons-row {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+
+    padding-inline: 24px;
+    padding-block: 24px;
+
+    & > .dialog-buttons {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      margin: 0;
+
+      & > .monaco-button {
+        width: fit-content;
+        margin: 0;
+        padding-inline: 24px;
+        padding-block: 0;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* .notification-list-item.expanded */
+.notification-list-item {
+  background-color: var(--md-sys-color-surface-container-highest);
+}
+
+

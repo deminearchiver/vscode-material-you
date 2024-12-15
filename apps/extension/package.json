@@ -1,0 +1,587 @@
+{
+  "private": true,
+  "name": "@vscode-material-you/extension",
+  "displayName": "material-you",
+  "description": "Lorem description ipsum",
+  "publisher": "deminearchiver",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "material-you.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "material-you.applyStyles",
+        "title": "Apply styles",
+        "category": "Material You"
+      },
+      {
+        "command": "material-you.removeStyles",
+        "title": "Remove styles",
+        "category": "Material You"
+      }
+    ],
+    "themes": [
+      {
+        "uiTheme": "vs",
+        "label": "Material You Baseline Light",
+        "path": "./static-light.json"
+      },
+      {
+        "uiTheme": "vs-dark",
+        "label": "Material You Baseline Dark",
+        "path": "./static-dark.json"
+      },
+      {
+        "uiTheme": "vs",
+        "label": "Material You Light",
+        "path": "./dynamic-light.json"
+      },
+      {
+        "uiTheme": "vs-dark",
+        "label": "Material You Dark",
+        "path": "./dynamic-dark.json"
+      }
+    ],
+    "colors": [
+      {
+        "id": "materialYou.primaryPaletteKeyColor",
+        "description": "primaryPaletteKeyColor",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.secondaryPaletteKeyColor",
+        "description": "secondaryPaletteKeyColor",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.tertiaryPaletteKeyColor",
+        "description": "tertiaryPaletteKeyColor",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.neutralPaletteKeyColor",
+        "description": "neutralPaletteKeyColor",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.neutralVariantPaletteKeyColor",
+        "description": "neutralVariantPaletteKeyColor",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.background",
+        "description": "background",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onBackground",
+        "description": "onBackground",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surface",
+        "description": "surface",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceDim",
+        "description": "surfaceDim",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceBright",
+        "description": "surfaceBright",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceContainerLowest",
+        "description": "surfaceContainerLowest",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceContainerLow",
+        "description": "surfaceContainerLow",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceContainer",
+        "description": "surfaceContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceContainerHigh",
+        "description": "surfaceContainerHigh",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceContainerHighest",
+        "description": "surfaceContainerHighest",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onSurface",
+        "description": "onSurface",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceVariant",
+        "description": "surfaceVariant",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onSurfaceVariant",
+        "description": "onSurfaceVariant",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.inverseSurface",
+        "description": "inverseSurface",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.inverseOnSurface",
+        "description": "inverseOnSurface",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.outline",
+        "description": "outline",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.outlineVariant",
+        "description": "outlineVariant",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.shadow",
+        "description": "shadow",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.scrim",
+        "description": "scrim",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.surfaceTint",
+        "description": "surfaceTint",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.primary",
+        "description": "primary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onPrimary",
+        "description": "onPrimary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.primaryContainer",
+        "description": "primaryContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onPrimaryContainer",
+        "description": "onPrimaryContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.inversePrimary",
+        "description": "inversePrimary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.secondary",
+        "description": "secondary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onSecondary",
+        "description": "onSecondary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.secondaryContainer",
+        "description": "secondaryContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onSecondaryContainer",
+        "description": "onSecondaryContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.tertiary",
+        "description": "tertiary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onTertiary",
+        "description": "onTertiary",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.tertiaryContainer",
+        "description": "tertiaryContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onTertiaryContainer",
+        "description": "onTertiaryContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.error",
+        "description": "error",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onError",
+        "description": "onError",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.errorContainer",
+        "description": "errorContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onErrorContainer",
+        "description": "onErrorContainer",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.primaryFixed",
+        "description": "primaryFixed",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.primaryFixedDim",
+        "description": "primaryFixedDim",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onPrimaryFixed",
+        "description": "onPrimaryFixed",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onPrimaryFixedVariant",
+        "description": "onPrimaryFixedVariant",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.secondaryFixed",
+        "description": "secondaryFixed",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.secondaryFixedDim",
+        "description": "secondaryFixedDim",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onSecondaryFixed",
+        "description": "onSecondaryFixed",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onSecondaryFixedVariant",
+        "description": "onSecondaryFixedVariant",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.tertiaryFixed",
+        "description": "tertiaryFixed",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.tertiaryFixedDim",
+        "description": "tertiaryFixedDim",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onTertiaryFixed",
+        "description": "onTertiaryFixed",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.onTertiaryFixedVariant",
+        "description": "onTertiaryFixedVariant",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      },
+      {
+        "id": "materialYou.highestSurface",
+        "description": "highestSurface",
+        "defaults": {
+          "light": "#6750A4",
+          "dark": "#D0BCFF"
+        }
+      }
+    ],
+    "configuration": {
+      "title": "Material You",
+      "properties": {
+        "materialYou.seedColor": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "default": "#6750a4",
+          "description": "Seed color"
+        },
+        "materialYou.schemeVariant": {
+          "type": "string",
+          "enum": [
+            "monochrome",
+            "neutral",
+            "tonalSpot",
+            "vibrant",
+            "expressive",
+            "fidelity",
+            "content",
+            "rainbow",
+            "fruitSalad"
+          ],
+          "enumItemLabels": [
+            "Monochrome",
+            "Neutral",
+            "Tonal Spot",
+            "Vibrant",
+            "Expressive",
+            "Fidelity",
+            "Content",
+            "Rainbow",
+            "Fruit Salad"
+          ],
+          "default": "tonalSpot",
+          "description": "Dynamic scheme variant"
+        },
+        "materialYou.colorContrast": {
+          "type": "number",
+          "enum": [
+            0,
+            0.5,
+            1
+          ],
+          "enumItemLabels": [
+            "Default",
+            "Medium",
+            "High"
+          ],
+          "description": "Higher contrast makes text, buttons, and icons stand out more. Choose the contrast that looks best to you"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "yarn run check-types && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "yarn run check-types && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile",
+    "check-types": "tsc --noEmit",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.2",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "@vanilla-extract/esbuild-plugin": "^2.3.12",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.16.0",
+    "lightningcss": "^1.28.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.7.2",
+    "unplugin-lightningcss": "^0.2.1"
+  },
+  "packageManager": "yarn@4.5.3",
+  "dependencies": {
+    "@material/material-color-utilities": "^0.3.0",
+    "@vanilla-extract/css": "^1.16.1",
+    "@vanilla-extract/dynamic": "^2.1.2",
+    "@vanilla-extract/recipes": "^0.5.5",
+    "@vscode/sudo-prompt": "^9.3.1"
+  }
+}

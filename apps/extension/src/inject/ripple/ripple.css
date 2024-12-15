@@ -1,0 +1,81 @@
+/* .ripple {
+  display: flex;
+  margin: auto;
+  pointer-events: none;
+}
+
+.ripple.disabled {
+  display: none;
+}
+
+@media (forced-colors: active) {
+  .ripple {
+    display: none;
+  }
+} */
+
+/* Old selector: .ripple, .surface, */
+.ripple {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  /* Copied from parent :host */
+  display: flex;
+  pointer-events: none;
+  margin: auto;
+}
+
+.ripple.disabled {
+  display: none;
+}
+
+@media (forced-colors: active) {
+  /* Old name: .surface */
+  .ripple {
+    display: none;
+  }
+}
+
+/* Old name: .surface */
+.ripple {
+  -webkit-tap-highlight-color: transparent;
+
+  &::before,
+  &::after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+  }
+
+  &::before {
+    /* background-color: map.get($tokens, 'hover-color'); */
+    background-color: var(--md-comp-ripple-hover-color, var(--md-sys-color-on-surface));
+    inset: 0;
+    transition: opacity 15ms linear, background-color 15ms linear;
+  }
+
+  &::after {
+    background: radial-gradient(
+      closest-side,
+      var(--md-comp-ripple-pressed-color, var(--md-sys-color-on-surface)) max(calc(100% - 70px), 65%),
+      transparent 100%
+    );
+    transform-origin: center center;
+    transition: opacity 375ms linear;
+  }
+}
+
+/* Old name: .surface */
+.ripple.hovered::before {
+  background-color: var(--md-comp-ripple-hover-color, var(--md-sys-color-on-surface));
+  /* opacity: map.get($tokens, 'hover-opacity'); */
+  opacity: var(--md-comp-ripple-hover-opacity, 0.08);
+}
+
+/* Old name: .surface */
+.ripple.pressed::after {
+  opacity: var(--md-comp-ripple-pressed-opacity, 0.10);
+  transition-duration: 105ms;
+}

@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@vscode-material-you/monorepo",
+  "packageManager": "yarn@4.5.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    ":": "yarn workspace",
+    ":extension": "yarn : @vscode-material-you/extension"
+  }
+}
